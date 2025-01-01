@@ -32,6 +32,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-ronan525-djangoblog-o5c0gq5l49u.ws.codeinstitute-ide.net',
     '.herokuapp.com',
+    '127.0.0.1',
+    'localhost'
 ]
 
 
