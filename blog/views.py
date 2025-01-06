@@ -7,6 +7,9 @@ from .forms import CommentForm
 # Create your views here.
 
 class PostList(generic.ListView):
+    """
+    Renders a list of all published :model:`blog.Post` instances.
+    """
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 6
@@ -22,6 +25,9 @@ def post_detail(request, slug):
 
     ``post``
         An instance of :model:`blog.Post`.
+
+    ``comments``
+        A queryset of :model:`blog.Comment` related to the post.
 
     **Template:**
 
